@@ -25,8 +25,9 @@
   max-width: 64px !important;
 }
 
-.arco-layout-sider-collapsed .arco-menu-item,
-.arco-layout-sider-collapsed .arco-menu-inline-header {
+/* 只影响第一级菜单项，不影响子菜单内的项目 */
+.arco-layout-sider-collapsed > .arco-layout-sider-children > .arco-menu > .arco-menu-item,
+.arco-layout-sider-collapsed > .arco-layout-sider-children > .arco-menu > .arco-menu-inline {
   padding: 0 !important;
   margin: 4px 0 !important;
   display: flex !important;
@@ -36,7 +37,9 @@
   min-width: 64px !important;
 }
 
-.arco-layout-sider-collapsed .arco-menu-icon {
+/* 第一级菜单图标居中 */
+.arco-layout-sider-collapsed > .arco-layout-sider-children > .arco-menu > .arco-menu-item .arco-menu-icon,
+.arco-layout-sider-collapsed > .arco-layout-sider-children > .arco-menu > .arco-menu-inline .arco-menu-icon {
   margin: 0 !important;
   padding: 0 !important;
   display: flex !important;
@@ -46,24 +49,25 @@
   min-width: 24px !important;
 }
 
-.arco-layout-sider-collapsed .arco-menu-item-inner,
-.arco-layout-sider-collapsed .arco-menu-inline-content {
+/* 第一级菜单项内部结构 */
+.arco-layout-sider-collapsed > .arco-layout-sider-children > .arco-menu > .arco-menu-item .arco-menu-item-inner,
+.arco-layout-sider-collapsed > .arco-layout-sider-children > .arco-menu > .arco-menu-inline .arco-menu-inline-content {
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
   padding: 0 !important;
   margin: 0 !important;
-  width: 64px !important;
 }
 
-/* 隐藏折叠状态下的文字 */
-.arco-layout-sider-collapsed .arco-menu-title-content {
+/* 隐藏第一级菜单的文字 */
+.arco-layout-sider-collapsed > .arco-layout-sider-children > .arco-menu > .arco-menu-item .arco-menu-title-content,
+.arco-layout-sider-collapsed > .arco-layout-sider-children > .arco-menu > .arco-menu-inline .arco-menu-title-content {
   display: none !important;
 }
 
 /* 隐藏展开箭头 */
-.arco-layout-sider-collapsed .arco-menu-inline-header .arco-icon-down,
-.arco-layout-sider-collapsed .arco-menu-inline-header .arco-icon-caret-down {
+.arco-layout-sider-collapsed > .arco-layout-sider-children > .arco-menu > .arco-menu-inline .arco-icon-down,
+.arco-layout-sider-collapsed > .arco-layout-sider-children > .arco-menu > .arco-menu-inline .arco-icon-caret-down {
   display: none !important;
 }
 
