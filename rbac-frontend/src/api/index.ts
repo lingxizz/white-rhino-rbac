@@ -15,7 +15,7 @@ export const userApi = {
   createUser: (data: Partial<User>) => api.post<User>('/users', data),
   updateUser: (id: string, data: Partial<User>) => api.patch<User>(`/users/${id}`, data),
   deleteUser: (id: string) => api.delete(`/users/${id}`),
-  assignRoles: (id: string, roleIds: string[]) => api.post(`/users/${id}/roles`, { roleIds }),
+  assignRoles: (id: string, roleIds: string[]) => api.post(`/users/${id}/roles`, { roleIds: roleIds.map(id => parseInt(id, 10)) }),
   updateProfile: (data: Partial<User>) => api.patch('/users/profile/me', data),
   changePassword: (data: { oldPassword: string; newPassword: string }) =>
     api.post('/users/profile/change-password', data),
@@ -29,7 +29,7 @@ export const roleApi = {
   updateRole: (id: string, data: Partial<Role>) => api.patch<Role>(`/roles/${id}`, data),
   deleteRole: (id: string) => api.delete(`/roles/${id}`),
   assignPermissions: (id: string, permissionIds: string[]) =>
-    api.post(`/roles/${id}/permissions`, { permissionIds }),
+    api.post(`/roles/${id}/permissions`, { permissionIds: permissionIds.map(id => parseInt(id, 10)) }),
 }
 
 // Permission APIs
