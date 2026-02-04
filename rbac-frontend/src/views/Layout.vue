@@ -381,16 +381,8 @@ body {
     padding: 0;
   }
   
-  /* ========== 仅在侧边栏收起时：第一级菜单图标居中 ========== */
-  
   /* 第一级菜单项居中 */
-  .sidebar-menu > li.arco-menu-item {
-    justify-content: center !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
-  
-  /* 第一级子菜单标题居中 */
+  .sidebar-menu > li.arco-menu-item,
   .sidebar-menu > div.arco-menu-submenu > div.arco-menu-inline-header {
     justify-content: center !important;
     padding-left: 0 !important;
@@ -403,20 +395,10 @@ body {
     margin: 0 auto !important;
   }
   
-  /* 隐藏第一级菜单文字 */
+  /* 隐藏第一级菜单文字和箭头 */
   .sidebar-menu > li.arco-menu-item .arco-menu-title-content,
-  .sidebar-menu > div.arco-menu-submenu > div.arco-menu-inline-header .arco-menu-title-content {
-    display: none !important;
-  }
-  
-  /* 隐藏展开箭头 */
-  .sidebar-menu > div.arco-menu-submenu > div.arco-menu-inline-header .arco-icon-down,
-  .sidebar-menu > div.arco-menu-submenu > div.arco-menu-inline-header .arco-icon-caret-down {
-    display: none !important;
-  }
-  
-  /* 收起状态下隐藏子菜单 */
-  .sidebar-menu > div.arco-menu-submenu .arco-menu-sub-menu {
+  .sidebar-menu > div.arco-menu-submenu > div.arco-menu-inline-header .arco-menu-title-content,
+  .sidebar-menu > div.arco-menu-submenu > div.arco-menu-inline-header .arco-icon-down {
     display: none !important;
   }
   
