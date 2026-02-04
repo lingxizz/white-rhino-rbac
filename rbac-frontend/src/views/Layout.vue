@@ -381,63 +381,43 @@ body {
     padding: 0;
   }
   
-  /* ========== 侧边栏收起状态 - 仅第一级菜单图标居中 ========== */
+  /* ========== 仅在侧边栏收起时：第一级菜单图标居中 ========== */
   
-  /* 第一级普通菜单项（仪表盘、个人中心） */
-  .sidebar-menu > :where(.arco-menu-item, [class*="arco-menu-item"]) {
+  /* 第一级菜单项居中 */
+  .sidebar-menu > li.arco-menu-item {
     justify-content: center !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
   
-  /* 第一级子菜单标题（系统管理） */
-  .sidebar-menu > :where(.arco-menu-submenu, [class*="submenu"]) > :where(.arco-menu-inline-header, [class*="inline-header"]) {
+  /* 第一级子菜单标题居中 */
+  .sidebar-menu > div.arco-menu-submenu > div.arco-menu-inline-header {
     justify-content: center !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
   
-  /* 图标居中 */
-  .sidebar-menu > :where(.arco-menu-item, [class*="arco-menu-item"]) :where(.arco-menu-icon, [class*="menu-icon"]),
-  .sidebar-menu > :where(.arco-menu-submenu, [class*="submenu"]) > :where(.arco-menu-inline-header, [class*="inline-header"]) :where(.arco-menu-icon, [class*="menu-icon"]) {
+  /* 第一级图标居中 */
+  .sidebar-menu > li.arco-menu-item .arco-menu-icon,
+  .sidebar-menu > div.arco-menu-submenu > div.arco-menu-inline-header .arco-menu-icon {
     margin: 0 auto !important;
   }
   
   /* 隐藏第一级菜单文字 */
-  .sidebar-menu > :where(.arco-menu-item, [class*="arco-menu-item"]) :where(.arco-menu-title-content, [class*="title-content"]),
-  .sidebar-menu > :where(.arco-menu-submenu, [class*="submenu"]) > :where(.arco-menu-inline-header, [class*="inline-header"]) :where(.arco-menu-title-content, [class*="title-content"]) {
+  .sidebar-menu > li.arco-menu-item .arco-menu-title-content,
+  .sidebar-menu > div.arco-menu-submenu > div.arco-menu-inline-header .arco-menu-title-content {
     display: none !important;
   }
   
   /* 隐藏展开箭头 */
-  .sidebar-menu > :where(.arco-menu-submenu, [class*="submenu"]) :where(.arco-icon-down, .arco-icon-caret-down, [class*="icon-down"]) {
+  .sidebar-menu > div.arco-menu-submenu > div.arco-menu-inline-header .arco-icon-down,
+  .sidebar-menu > div.arco-menu-submenu > div.arco-menu-inline-header .arco-icon-caret-down {
     display: none !important;
-  }
-  
-  /* 展开状态下子菜单显示为纵向列表 */
-  .sidebar-menu > :where(.arco-menu-submenu, [class*="submenu"]):not(.arco-menu-submenu-collapsed) :where(.arco-menu-sub-menu, [class*="sub-menu"]),
-  .sidebar-menu > :where(.arco-menu-submenu, [class*="submenu"]).arco-menu-submenu-open :where(.arco-menu-sub-menu, [class*="sub-menu"]) {
-    display: block !important;
-    width: 100% !important;
-  }
-  
-  /* 子菜单项纵向排列 */
-  .sidebar-menu > :where(.arco-menu-submenu, [class*="submenu"]):not(.arco-menu-submenu-collapsed) :where(.arco-menu-sub-menu, [class*="sub-menu"]) > *,
-  .sidebar-menu > :where(.arco-menu-submenu, [class*="submenu"]).arco-menu-submenu-open :where(.arco-menu-sub-menu, [class*="sub-menu"]) > * {
-    display: flex !important;
-    width: 100% !important;
-    padding: 0 16px !important;
-    box-sizing: border-box !important;
   }
   
   /* 收起状态下隐藏子菜单 */
-  :deep(.arco-layout-sider-collapsed) .sidebar-menu > :where(.arco-menu-submenu, [class*="submenu"]) :where(.arco-menu-sub-menu, [class*="sub-menu"]) {
+  .sidebar-menu > div.arco-menu-submenu .arco-menu-sub-menu {
     display: none !important;
-  }
-  
-  /* 菜单内部不限制宽度 */
-  :deep(.arco-menu-inner) {
-    overflow-x: hidden !important;
   }
   
   /* 修复底部折叠触发器 */
