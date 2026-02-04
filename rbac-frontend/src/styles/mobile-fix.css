@@ -57,6 +57,21 @@
   align-items: center !important;
   padding: 0 !important;
   margin: 0 !important;
+  width: 64px !important;
+}
+
+/* 修复单菜单项（仪表盘、个人中心）的图标居中 */
+.arco-layout-sider-collapsed > .arco-layout-sider-children > .arco-menu > .arco-menu-item {
+  justify-content: center !important;
+}
+
+.arco-layout-sider-collapsed > .arco-layout-sider-children > .arco-menu > .arco-menu-item > .arco-menu-item-inner {
+  justify-content: center !important;
+  width: 64px !important;
+}
+
+.arco-layout-sider-collapsed > .arco-layout-sider-children > .arco-menu > .arco-menu-item > .arco-menu-item-inner > .arco-menu-icon {
+  margin: 0 auto !important;
 }
 
 /* 隐藏第一级菜单的文字 */
