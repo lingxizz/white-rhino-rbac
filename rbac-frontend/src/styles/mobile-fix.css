@@ -18,71 +18,46 @@
   }
 }
 
-/* 侧边栏折叠状态全局修复 */
+/* 侧边栏折叠状态 - 仅第一级菜单图标居中 */
 .arco-layout-sider-collapsed {
   width: 64px !important;
   min-width: 64px !important;
   max-width: 64px !important;
 }
 
-/* 只影响第一级菜单项，不影响子菜单内的项目 */
-.arco-layout-sider-collapsed > .arco-layout-sider-children > .arco-menu > .arco-menu-item,
-.arco-layout-sider-collapsed > .arco-layout-sider-children > .arco-menu > .arco-menu-inline {
-  padding: 0 !important;
-  margin: 4px 0 !important;
+/* 第一级菜单项容器居中 */
+.arco-layout-sider-collapsed .arco-menu > .arco-menu-item,
+.arco-layout-sider-collapsed .arco-menu > .arco-submenu > .arco-menu-inline-header {
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
-  width: 64px !important;
-  min-width: 64px !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
-/* 第一级菜单图标居中 */
-.arco-layout-sider-collapsed > .arco-layout-sider-children > .arco-menu > .arco-menu-item .arco-menu-icon,
-.arco-layout-sider-collapsed > .arco-layout-sider-children > .arco-menu > .arco-menu-inline .arco-menu-icon {
-  margin: 0 !important;
-  padding: 0 !important;
+/* 第一级菜单图标容器 */
+.arco-layout-sider-collapsed .arco-menu > .arco-menu-item .arco-menu-item-inner,
+.arco-layout-sider-collapsed .arco-menu > .arco-submenu > .arco-menu-inline-header .arco-menu-inline-content {
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
-  width: 24px !important;
-  min-width: 24px !important;
+  width: 100% !important;
 }
 
-/* 第一级菜单项内部结构 */
-.arco-layout-sider-collapsed > .arco-layout-sider-children > .arco-menu > .arco-menu-item .arco-menu-item-inner,
-.arco-layout-sider-collapsed > .arco-layout-sider-children > .arco-menu > .arco-menu-inline .arco-menu-inline-content {
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  width: 64px !important;
-}
-
-/* 修复单菜单项（仪表盘、个人中心）的图标居中 */
-.arco-layout-sider-collapsed > .arco-layout-sider-children > .arco-menu > .arco-menu-item {
-  justify-content: center !important;
-}
-
-.arco-layout-sider-collapsed > .arco-layout-sider-children > .arco-menu > .arco-menu-item > .arco-menu-item-inner {
-  justify-content: center !important;
-  width: 64px !important;
-}
-
-.arco-layout-sider-collapsed > .arco-layout-sider-children > .arco-menu > .arco-menu-item > .arco-menu-item-inner > .arco-menu-icon {
+/* 图标本身居中 */
+.arco-layout-sider-collapsed .arco-menu > .arco-menu-item .arco-menu-icon,
+.arco-layout-sider-collapsed .arco-menu > .arco-submenu > .arco-menu-inline-header .arco-menu-icon {
   margin: 0 auto !important;
 }
 
 /* 隐藏第一级菜单的文字 */
-.arco-layout-sider-collapsed > .arco-layout-sider-children > .arco-menu > .arco-menu-item .arco-menu-title-content,
-.arco-layout-sider-collapsed > .arco-layout-sider-children > .arco-menu > .arco-menu-inline .arco-menu-title-content {
+.arco-layout-sider-collapsed .arco-menu > .arco-menu-item .arco-menu-title-content,
+.arco-layout-sider-collapsed .arco-menu > .arco-submenu > .arco-menu-inline-header .arco-menu-title-content {
   display: none !important;
 }
 
 /* 隐藏展开箭头 */
-.arco-layout-sider-collapsed > .arco-layout-sider-children > .arco-menu > .arco-menu-inline .arco-icon-down,
-.arco-layout-sider-collapsed > .arco-layout-sider-children > .arco-menu > .arco-menu-inline .arco-icon-caret-down {
+.arco-layout-sider-collapsed .arco-menu > .arco-submenu > .arco-menu-inline-header .arco-icon-down {
   display: none !important;
 }
 
@@ -99,9 +74,5 @@
 }
 
 .arco-layout-sider-collapsed .arco-layout-sider-trigger-icon {
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  width: 24px !important;
-  margin: 0 !important;
+  margin: 0 auto !important;
 }
