@@ -17,6 +17,7 @@
         :selected-keys="selectedKeys"
         :open-keys="openKeys"
         @sub-menu-click="handleSubMenuClick"
+        auto-open-selected
         :collapse="collapsed"
         class="sidebar-menu"
       >
