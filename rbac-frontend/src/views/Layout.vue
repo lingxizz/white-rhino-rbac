@@ -378,66 +378,93 @@ body {
   }
   
   .sidebar-menu {
-    padding: 8px;
+    padding: 0;
   }
   
-  /* 修复菜单项居中 */
+  /* 强制菜单项居中 */
   .arco-menu-item,
   .arco-menu-inline-header {
+    padding: 0 !important;
+    margin: 4px 0 !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 64px !important;
+    min-width: 64px !important;
+    max-width: 64px !important;
+  }
+  
+  /* 强制图标容器居中 */
+  .arco-menu-icon {
+    margin: 0 auto !important;
     padding: 0 !important;
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
+    width: 24px !important;
+    min-width: 24px !important;
   }
   
-  /* 修复图标居中 */
-  .arco-menu-icon {
-    margin: 0 !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-  }
-  
-  /* 修复菜单项内部结构 */
+  /* 强制菜单项内部 flex 居中 */
   .arco-menu-item-inner,
   .arco-menu-inline-content {
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
-    width: 100%;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 64px !important;
   }
   
-  /* 修复子菜单标题 */
+  /* 强制子菜单标题居中 */
+  .arco-menu-inline-header {
+    justify-content: center !important;
+  }
+  
   .arco-menu-inline-header .arco-menu-icon {
     margin: 0 auto !important;
   }
   
-  /* 隐藏菜单文字 */
-  .arco-menu-item-inner span:not(.arco-menu-icon),
-  .arco-menu-inline-content span:not(.arco-menu-icon) {
+  /* 隐藏所有文字 */
+  .arco-menu-item-inner > span:not(.arco-menu-icon):not(.arco-icon),
+  .arco-menu-inline-content > span:not(.arco-menu-icon):not(.arco-icon) {
     display: none !important;
   }
   
-  /* 只显示图标 */
-  .arco-menu-item-inner > *:not(.arco-menu-icon),
-  .arco-menu-inline-content > *:not(.arco-menu-icon) {
+  /* 隐藏子菜单标题文字 */
+  .arco-menu-title-content {
+    display: none !important;
+  }
+  
+  /* 隐藏展开箭头 */
+  .arco-menu-inline-header .arco-icon-down,
+  .arco-menu-inline-header .arco-icon-caret-down {
     display: none !important;
   }
   
   :deep(.arco-menu-inner) {
     overflow-x: hidden !important;
+    width: 64px !important;
   }
   
   /* 修复底部折叠触发器 */
   :deep(.arco-layout-sider-trigger) {
     width: 64px !important;
+    min-width: 64px !important;
+    max-width: 64px !important;
     padding: 0 !important;
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
+    left: 0 !important;
   }
   
+  /* 确保触发器图标居中 */
   :deep(.arco-layout-sider-trigger-icon) {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 24px !important;
     margin: 0 auto !important;
   }
 }

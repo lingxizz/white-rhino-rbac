@@ -17,3 +17,72 @@
     overflow-y: auto !important;
   }
 }
+
+/* 侧边栏折叠状态全局修复 */
+.arco-layout-sider-collapsed {
+  width: 64px !important;
+  min-width: 64px !important;
+  max-width: 64px !important;
+}
+
+.arco-layout-sider-collapsed .arco-menu-item,
+.arco-layout-sider-collapsed .arco-menu-inline-header {
+  padding: 0 !important;
+  margin: 4px 0 !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 64px !important;
+  min-width: 64px !important;
+}
+
+.arco-layout-sider-collapsed .arco-menu-icon {
+  margin: 0 !important;
+  padding: 0 !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 24px !important;
+  min-width: 24px !important;
+}
+
+.arco-layout-sider-collapsed .arco-menu-item-inner,
+.arco-layout-sider-collapsed .arco-menu-inline-content {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 64px !important;
+}
+
+/* 隐藏折叠状态下的文字 */
+.arco-layout-sider-collapsed .arco-menu-title-content {
+  display: none !important;
+}
+
+/* 隐藏展开箭头 */
+.arco-layout-sider-collapsed .arco-menu-inline-header .arco-icon-down,
+.arco-layout-sider-collapsed .arco-menu-inline-header .arco-icon-caret-down {
+  display: none !important;
+}
+
+/* 底部折叠按钮居中 */
+.arco-layout-sider-collapsed .arco-layout-sider-trigger {
+  width: 64px !important;
+  min-width: 64px !important;
+  max-width: 64px !important;
+  padding: 0 !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  left: 0 !important;
+}
+
+.arco-layout-sider-collapsed .arco-layout-sider-trigger-icon {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 24px !important;
+  margin: 0 !important;
+}
