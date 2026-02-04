@@ -237,6 +237,10 @@ const toggleCollapsed = (val: boolean) => {
   collapsed.value = val
 }
 
+const handleCollapse = (val: boolean, type: string) => {
+  collapsed.value = val
+}
+
 const handleMenuClick = async (key: string) => {
   if (route.path === key) return
   try {
@@ -345,6 +349,7 @@ body {
 
 :deep(.arco-layout-sider-children) {
   background: var(--sidebar-bg) !important;
+  overflow-x: hidden !important;
 }
 
 .desktop-sider {
@@ -352,6 +357,38 @@ body {
   border-radius: 0 16px 16px 0;
   margin: 8px 0 8px 8px;
   height: calc(100vh - 16px);
+}
+
+/* Collapsed sidebar styles */
+:deep(.arco-layout-sider-collapsed) {
+  .logo {
+    margin: 0;
+    justify-content: center;
+  }
+  
+  .arco-menu-icon {
+    margin-right: 0 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 24px;
+  }
+  
+  .sidebar-menu {
+    padding: 8px 4px;
+  }
+  
+  .arco-menu-item,
+  .arco-menu-inline-header {
+    padding: 0 !important;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+  }
+  
+  :deep(.arco-menu-inner) {
+    overflow-x: hidden !important;
+  }
 }
 
 .logo {

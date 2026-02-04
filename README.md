@@ -74,7 +74,7 @@ rbac-system/
 ### 1. 克隆项目
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/lingxizz/white-rhino-rbac.git
 cd rbac-system
 ```
 
