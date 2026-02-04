@@ -414,8 +414,24 @@ body {
     display: none !important;
   }
   
+  /* 展开状态下子菜单显示为纵向列表 */
+  .sidebar-menu > :where(.arco-menu-submenu, [class*="submenu"]):not(.arco-menu-submenu-collapsed) :where(.arco-menu-sub-menu, [class*="sub-menu"]),
+  .sidebar-menu > :where(.arco-menu-submenu, [class*="submenu"]).arco-menu-submenu-open :where(.arco-menu-sub-menu, [class*="sub-menu"]) {
+    display: block !important;
+    width: 100% !important;
+  }
+  
+  /* 子菜单项纵向排列 */
+  .sidebar-menu > :where(.arco-menu-submenu, [class*="submenu"]):not(.arco-menu-submenu-collapsed) :where(.arco-menu-sub-menu, [class*="sub-menu"]) > *,
+  .sidebar-menu > :where(.arco-menu-submenu, [class*="submenu"]).arco-menu-submenu-open :where(.arco-menu-sub-menu, [class*="sub-menu"]) > * {
+    display: flex !important;
+    width: 100% !important;
+    padding: 0 16px !important;
+    box-sizing: border-box !important;
+  }
+  
   /* 收起状态下隐藏子菜单 */
-  .sidebar-menu > :where(.arco-menu-submenu, [class*="submenu"]) :where(.arco-menu-sub-menu, [class*="sub-menu"]) {
+  :deep(.arco-layout-sider-collapsed) .sidebar-menu > :where(.arco-menu-submenu, [class*="submenu"]) :where(.arco-menu-sub-menu, [class*="sub-menu"]) {
     display: none !important;
   }
   
