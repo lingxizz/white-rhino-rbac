@@ -361,33 +361,49 @@ body {
 
 /* Collapsed sidebar styles */
 :deep(.arco-layout-sider-collapsed) {
+  width: 64px !important;
+  min-width: 64px !important;
+  max-width: 64px !important;
+  flex: 0 0 64px !important;
+  
   .logo {
     margin: 0;
     justify-content: center;
+    padding: 0;
   }
   
-  .arco-menu-icon {
-    margin-right: 0 !important;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-width: 24px;
+  .sidebar-logo {
+    width: 32px;
+    height: 32px;
   }
   
   .sidebar-menu {
-    padding: 8px 4px;
+    padding: 8px;
   }
   
   .arco-menu-item,
   .arco-menu-inline-header {
     padding: 0 !important;
     justify-content: center;
-    display: flex;
-    width: 100%;
+    text-align: center;
+  }
+  
+  .arco-menu-icon {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
   }
   
   :deep(.arco-menu-inner) {
     overflow-x: hidden !important;
+  }
+  
+  /* 修复底部折叠触发器 */
+  :deep(.arco-layout-sider-trigger) {
+    width: 64px !important;
+    padding: 0 !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
   }
 }
 
