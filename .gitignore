@@ -7,6 +7,10 @@ dist/
 build/
 *.js.map
 
+# Frontend build output
+rbac-frontend/dist/
+rbac-frontend/dist-ssr/
+
 # Logs
 logs/
 *.log
