@@ -1,0 +1,19 @@
+/* 移动端弹窗全局修复 */
+@media (max-width: 768px) {
+  .arco-modal-wrapper {
+    padding: 16px !important;
+    align-items: flex-start !important;
+    padding-top: 60px !important;
+  }
+  
+  .arco-modal-wrapper .arco-modal {
+    width: calc(100vw - 32px) !important;
+    max-width: calc(100vw - 32px) !important;
+    margin: 0 !important;
+  }
+  
+  .arco-modal-body {
+    max-height: calc(100vh - 200px) !important;
+    overflow-y: auto !important;
+  }
+}

@@ -1,0 +1,5 @@
+Mission Accomplished.
+
+Project location: /root/.openclaw/workspace/rbac-system
+
+Run command: docker-compose up -d --build
