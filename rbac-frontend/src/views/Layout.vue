@@ -381,7 +381,8 @@ body {
     padding: 0;
   }
   
-  /* 只影响第一级菜单项 - 使用子选择器 */
+  /* ========== 侧边栏收起状态 - 第一级菜单样式 ========== */
+  /* 第一级菜单项容器 */
   .sidebar-menu > .arco-menu-item,
   .sidebar-menu > .arco-submenu > .arco-menu-inline-header {
     padding: 0 !important;
@@ -389,16 +390,12 @@ body {
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
-  }
-  
-  /* 第一级菜单项宽度 */
-  .sidebar-menu > .arco-menu-item {
     width: 64px !important;
     min-width: 64px !important;
     max-width: 64px !important;
   }
   
-  /* 第一级图标居中 */
+  /* 第一级图标容器居中 */
   .sidebar-menu > .arco-menu-item .arco-menu-item-inner,
   .sidebar-menu > .arco-submenu > .arco-menu-inline-header .arco-menu-inline-content {
     display: flex !important;
@@ -417,13 +414,7 @@ body {
     align-items: center !important;
     min-width: 24px !important;
     width: 24px !important;
-  }
-  
-  /* 子菜单标题也需要处理 */
-  .sidebar-menu > .arco-submenu > .arco-menu-inline-header {
-    width: 64px !important;
-    min-width: 64px !important;
-    max-width: 64px !important;
+    text-align: center !important;
   }
   
   /* 隐藏第一级菜单的文字 */
@@ -438,34 +429,19 @@ body {
     display: none !important;
   }
   
+  /* 隐藏收起状态下的子菜单 */
+  .sidebar-menu > .arco-submenu .arco-menu-sub-menu {
+    display: none !important;
+  }
+  
   /* 菜单内部不限制宽度，避免影响子菜单 */
   :deep(.arco-menu-inner) {
     overflow-x: hidden !important;
   }
   
-  /* 子菜单弹出层样式 - 确保正常显示 */
-  :deep(.arco-menu-submenu-inline) {
-    .arco-menu-sub-menu {
-      display: block !important;
-    }
-    
-    .arco-menu-item {
-      display: flex !important;
-      padding: 0 12px !important;
-      width: auto !important;
-      min-width: auto !important;
-      max-width: none !important;
-    }
-    
-    .arco-menu-item-inner {
-      display: flex !important;
-      padding: 0 !important;
-      width: auto !important;
-    }
-    
-    .arco-menu-title-content {
-      display: inline !important;
-    }
+  /* 侧边栏收起时隐藏子菜单 */
+  .sidebar-menu > .arco-submenu .arco-menu-sub-menu {
+    display: none !important;
   }
   
   /* 修复底部折叠触发器 */
