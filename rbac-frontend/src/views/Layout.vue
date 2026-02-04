@@ -509,6 +509,17 @@ body {
   align-items: center;
 }
 
+/* 子菜单容器 - 确保纵向排列 */
+:deep(.arco-menu-sub-menu) {
+  display: block !important;
+}
+
+/* 子菜单项 - 确保纵向显示 */
+:deep(.arco-menu-sub-menu .arco-menu-item) {
+  display: flex !important;
+  width: 100% !important;
+}
+
 /* Main Layout */
 .main-layout {
   background: var(--content-bg);
