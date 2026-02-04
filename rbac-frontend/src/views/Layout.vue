@@ -381,16 +381,47 @@ body {
     padding: 8px;
   }
   
+  /* 修复菜单项居中 */
   .arco-menu-item,
   .arco-menu-inline-header {
     padding: 0 !important;
-    justify-content: center;
-    text-align: center;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
   }
   
+  /* 修复图标居中 */
   .arco-menu-icon {
-    margin-right: 0 !important;
-    margin-left: 0 !important;
+    margin: 0 !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  
+  /* 修复菜单项内部结构 */
+  .arco-menu-item-inner,
+  .arco-menu-inline-content {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100%;
+  }
+  
+  /* 修复子菜单标题 */
+  .arco-menu-inline-header .arco-menu-icon {
+    margin: 0 auto !important;
+  }
+  
+  /* 隐藏菜单文字 */
+  .arco-menu-item-inner span:not(.arco-menu-icon),
+  .arco-menu-inline-content span:not(.arco-menu-icon) {
+    display: none !important;
+  }
+  
+  /* 只显示图标 */
+  .arco-menu-item-inner > *:not(.arco-menu-icon),
+  .arco-menu-inline-content > *:not(.arco-menu-icon) {
+    display: none !important;
   }
   
   :deep(.arco-menu-inner) {
@@ -404,6 +435,10 @@ body {
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
+  }
+  
+  :deep(.arco-layout-sider-trigger-icon) {
+    margin: 0 auto !important;
   }
 }
 
@@ -451,6 +486,8 @@ body {
   border-radius: 8px;
   margin: 4px 0;
   color: var(--color-text-2);
+  display: flex;
+  align-items: center;
   
   &:hover {
     background: var(--sidebar-hover) !important;
@@ -468,14 +505,31 @@ body {
   border-radius: 8px;
   margin: 4px 0;
   color: var(--color-text-2);
+  display: flex;
+  align-items: center;
   
   &:hover {
     background: var(--sidebar-hover) !important;
   }
 }
 
-:deep(.arco-icon) {
+:deep(.arco-menu-icon) {
   font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+:deep(.arco-menu-item-inner) {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+:deep(.arco-menu-inline-content) {
+  display: flex;
+  align-items: center;
+  width: 100%;
 }
 
 /* Main Layout */
