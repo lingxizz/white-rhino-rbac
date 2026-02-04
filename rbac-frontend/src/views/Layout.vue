@@ -396,6 +396,12 @@ body {
     width: 100%;
   }
   
+  /* 隐藏菜单文字和箭头 */
+  .arco-menu-title-content,
+  .arco-icon-down {
+    display: none !important;
+  }
+  
   :deep(.arco-menu-inner) {
     overflow-x: hidden !important;
   }
