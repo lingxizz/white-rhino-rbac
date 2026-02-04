@@ -359,7 +359,7 @@ body {
   height: calc(100vh - 16px);
 }
 
-/* Collapsed sidebar styles - ONLY affect first level menu */
+/* Collapsed sidebar styles */
 :deep(.arco-layout-sider-collapsed) {
   width: 64px !important;
   min-width: 64px !important;
@@ -381,24 +381,24 @@ body {
     padding: 0;
   }
   
-  /* 第一级菜单项居中 */
-  .sidebar-menu > li.arco-menu-item,
-  .sidebar-menu > div.arco-menu-submenu > div.arco-menu-inline-header {
+  /* 仅第一级菜单项居中 */
+  .sidebar-menu > .arco-menu-item,
+  .sidebar-menu > .arco-submenu > .arco-menu-inline-header {
     justify-content: center !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
   
-  /* 第一级图标居中 */
-  .sidebar-menu > li.arco-menu-item .arco-menu-icon,
-  .sidebar-menu > div.arco-menu-submenu > div.arco-menu-inline-header .arco-menu-icon {
+  /* 仅第一级图标居中 */
+  .sidebar-menu > .arco-menu-item > .arco-menu-item-inner > .arco-menu-icon,
+  .sidebar-menu > .arco-submenu > .arco-menu-inline-header > .arco-menu-inline-content > .arco-menu-icon {
     margin: 0 auto !important;
   }
   
   /* 隐藏第一级菜单文字和箭头 */
-  .sidebar-menu > li.arco-menu-item .arco-menu-title-content,
-  .sidebar-menu > div.arco-menu-submenu > div.arco-menu-inline-header .arco-menu-title-content,
-  .sidebar-menu > div.arco-menu-submenu > div.arco-menu-inline-header .arco-icon-down {
+  .sidebar-menu > .arco-menu-item > .arco-menu-item-inner > .arco-menu-title-content,
+  .sidebar-menu > .arco-submenu > .arco-menu-inline-header > .arco-menu-inline-content > .arco-menu-title-content,
+  .sidebar-menu > .arco-submenu > .arco-menu-inline-header > .arco-icon-down {
     display: none !important;
   }
   
@@ -502,16 +502,11 @@ body {
   justify-content: center;
 }
 
-:deep(.arco-menu-item-inner) {
-  display: flex;
-  align-items: center;
-  width: 100%;
-}
-
+/* 菜单项基础样式 - 不影响子菜单布局 */
+:deep(.arco-menu-item-inner),
 :deep(.arco-menu-inline-content) {
   display: flex;
   align-items: center;
-  width: 100%;
 }
 
 /* Main Layout */
